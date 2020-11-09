@@ -31,7 +31,7 @@ render(
       h3: Base("h3", "text-center text-2xl"),
       ul: Base("ul", "ml-4 list-inside list-disc"),
       ol: Base("ol", "ml-4 list-inside list-decimal"),
-      table: Base("table", "table-auto mx-auto"),
+      table: Base("table", "table-auto mx-auto text-sm"),
       td: Base("td", "px-4 py-2 border"),
       th: Base("th", "px-4 py-2 border bg-gray-200"),
     }}

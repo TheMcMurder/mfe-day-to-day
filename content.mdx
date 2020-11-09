@@ -50,7 +50,7 @@ TL;DR It's all about the DX. Oh... And a CDN bug that AWS engineers can't figure
 
 ## So long - Migration - Stage 3
 ![Stage 3 - Move Primary navigation out of Quicksilver](https://i.imgur.com/nDbxUbi.png){.mx-auto .h-64}
-<Appear>On completion of Stage 3. The DX will be better</Appear>
+<Appear>On completion of Stage 3. The DX will be better. Better incremental path to success.</Appear>
 
 ---
 
@@ -87,24 +87,39 @@ TL;DR It's all about the DX. Oh... And a CDN bug that AWS engineers can't figure
 ---
 
 ## Misconception - Autonomy and alignment
-- Teams are going to have increased Autonomy
-- Autonomy isn't free
+- Not anarchy
+- Not a mutually exclusive relationship
+<Appear>
+  <img src='https://miro.medium.com/max/1300/1*3PQHnnpNKsVAJhNts_GhPQ.png' class='mx-auto h-64'></img>
+</Appear>
 
 ---
 
-## Misconception - Standarization vs Autonomy
+## Misconception - Standarization/Consistency and Flexibility
+
+- <Appear>Standardization helps enable flexibility/autonomy</Appear>
+- <Appear>MFE utilities (data-fetching, notification-service, etc) replace QS context and provide APIs to access data</Appear>
+- <Appear>Hate the exposed APIs? Open an issue on it, propose a change, etc.</Appear>
 
 ---
 
 ## Misconception - Module federation
 
+|         | Module Federation   |  SystemJS                |
+| ------- | ------------------- | ------------------------ |
+| format  | CommonJS only       | System.register prefered |
+| registry| set/get             | set/get/import/delete/etc|
+| build   | webpack/rollup      | webpack/rollup/others    |
+| esm*    | CJS features only   | Supports ESM features    |
+
+<p className='text-xs pt-4'><span className='text-red-500'>*</span> referring to module format supporting ESM features. IE live bindings</p>
+
 ---
 
 ## Misconception - Browser specifications
 
----
-
-## Misconception - Deno/Snowpack
+- Import maps are a browser specification that is actively being implemented
+- SystemJS provides an import-map polyfill and a related module registry
 
 ---
 
@@ -139,55 +154,6 @@ TL;DR It's all about the DX. Oh... And a CDN bug that AWS engineers can't figure
 - <Appear>Dependency Analysis</Appear>
 - <Appear>Deprecation Warnings</Appear>
 - <Appear>Custom lint tools</Appear>
-
----
-
-### Code blocks are supported!
-
-```js
-// With syntax highlighting!
-let a = "test";
-
-const b = false;
-
-function hello(greeting = "world") {
-  return `Hello ${world}!`;
-}
-```
-
----
-
-# `Appear` component
-
-Use keyboard arrow up and down to make elements appear
-
-- <Appear>List item 1</Appear>
-- <Appear>List item 2</Appear>
-- <Appear>List item 3</Appear>
-
----
-
-# Data in a table
-
-| A   | B   | C   |
-| --- | --- | --- |
-| 1A  | 1B  | 1C  |
-| 2A  | 2B  | 2C  |
-| 3A  | 3B  | 3C  |
-
----
-
-<div className="mx-auto w-auto sm:w-3/4 lg:w-1/2">
-
-# Aside
-
-An `aside` element is usually more appropriate than the Markdown `blockquote`. This component should be used in those instances.
-
-<Aside>Here is some relevant, tangential information.</Aside>
-<Aside info>Here is some indirectly related to callout.</Aside>
-<Aside warning>Here is a warning you should look at!</Aside>
-
-</div>
 
 ---
 
